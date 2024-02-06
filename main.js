@@ -16,22 +16,27 @@ let ValorAuto = prompt("Ingrese el valor estimado de su automovil");
 console.log(ValorAuto);
 
 let MarcaAuto = prompt("Ingrese la marca de su movil: Ford, Chevrolet, Citroen o Fiat ");
-let TipoAuto = prompt("Ingrese su tipo de movil: Suv, Coupe, Camioneta o Sedan");
-let TipoPlan = prompt("Escriba el tipo de plan: Basico o Premium");
+console.log(MarcaAuto);
 
-// Valores para la marca del automóvil
+let TipoAuto = prompt("Ingrese su tipo de movil: Suv, Coupe, Camioneta o Sedan");
+console.log(TipoAuto);
+
+let TipoPlan = prompt("Escriba el tipo de plan: Basico o Premium");
+console.log(TipoPlan);
+
+// Aqui puse los costos por la marca del automóvil
 let valorFord = 2000;
 let valorChevrolet = 1500;
 let valorCitroen = 2500;
 let valorFiat = 1800;
 
-// Valores para el tipo de automóvil
+// Aqui puse los costos por el tipo de automóvil
 let valorSUV = 2000;
 let valorCoupe = 1500;
 let valorCamioneta = 2500;
 let valorSedan = 1800;
 
-// Valores para el tipo de plan
+// Aqui puse los valores para el tipo de plan
 let ValorBasico = 1000;
 let ValorPremium = 4000;
 
@@ -40,7 +45,7 @@ let CostoTipo = 0;
 let CostoPlan = 0;
 let CostoBase = ValorAuto * 0.02;
 
-// Calcular costo por marca
+// Aca hago para que la calculadora tome los valores segun la opcion que elija el usuario de costo por marca
 switch (MarcaAuto.toLowerCase()) {
 case "ford":
     CostoMarca = valorFord;
@@ -58,7 +63,7 @@ default:
     alert("Marca de automóvil no reconocida.");
 }
 
-// Calcular costo por tipo de automóvil
+// Aca lo mismo que lo anterior solo que por costo de tipo de automóvil
 switch (TipoAuto.toLowerCase()) {
 case "suv":
     CostoTipo = valorSUV;
@@ -88,10 +93,10 @@ default:
     alert("Tipo de plan no reconocido.");
 }
 
-// Suma de los Costos parciales
+// Sumamos los Costos parciales
 let costoTotal = CostoBase + CostoMarca + CostoTipo + CostoPlan;
 
-// Aplicar aumento del 10% si la edad supera los 70 años por los riesgos de menor vision y reflejos que presentan
+// Aplicar aumento del 10% si la edad supera los 70 años por los riesgos de menor vision y reflejos que presentan, uso el if ya que en caso de que sea menor no se aplica ese 10%
 if (parseInt(Edad) > 70) {
     costoTotal *= 1.1;
 }
