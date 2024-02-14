@@ -1,3 +1,4 @@
+function calculadoraseguro() {
 alert("BIENVENIDO AL SIMULADOR DE SEGURO PARA AUTO DE NUESTRA EMPRESA, A CONTINUACION DEBERA LLENAR LAS CASILLAS CON INFORMACION DE USTED Y SU AUTO PARA QUE PODAMOS HACER UNA EVALUACION Y DARLE EL MEJOR PRECIO");
 
 let Nombre = prompt("Ingresa tu nombre");
@@ -103,3 +104,17 @@ if (parseInt(Edad) > 70) {
 
 console.log(`El costo total del seguro es de $${costoTotal}.`);
 alert(`El costo total del seguro es de $${costoTotal}.`);
+}
+
+
+
+//a partir de aca pregunta si quiere hacer otro simulador (bucle)
+let deseaContinuar = true;
+
+while (deseaContinuar) {
+    calculadoraseguro();
+
+    let respuesta = prompt("¿Desea realizar otra simulación? (Sí/No)").toLowerCase();
+    deseaContinuar = respuesta === 'si';
+}
+
