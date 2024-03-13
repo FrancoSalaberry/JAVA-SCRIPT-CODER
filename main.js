@@ -25,6 +25,7 @@ const añoMinimo = prompt('Ingrese el año mínimo deseado:(hasta 2005)');
 console.log (añoMinimo)
 
 
+
 const precioMax = parseInt(precioMaximo);
 const añoMinimoNum = parseInt(añoMinimo);
 
@@ -164,9 +165,8 @@ function calculadoraseguro() {
     
     console.log(`El costo total del seguro es de $${costoTotal}.`);
     alert(`El costo total del seguro es de $${costoTotal}.`);
-    }
     
-    
+}
     
     //a partir de aca pregunta si quiere hacer otro simulador (bucle)
     let deseaContinuar = true;
@@ -177,4 +177,4 @@ function calculadoraseguro() {
         let respuesta = prompt("¿Desea realizar otra simulación? (Sí/No)").toLowerCase();
         deseaContinuar = respuesta === 'si';
     }
-    
+
