@@ -1,0 +1,87 @@
+!DOCTYPE html>
+<html lang="es">
+    <head lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/main.js"></script>
+    </head>
+    <body onload="">
+        <header>
+            <H1>SIMULADOR DE SEGURO PARA AUTOS DE CORPORACION SALA'S</H1>
+        </header>
+    <title>Simulador Seguro para autos</title>
+    <section class="FormSeguro">
+        <form>
+        <div class="Campo">
+            <label>Marca</label>
+            <select name="Marca" id="marca">
+                <option value="">-- seleccione --</option>
+                <option value="Chevrolet"></option>
+                <option value="Citroen"></option>
+                <option value="Fiat"></option>
+                <option value="Ford"></option> 
+            </select> 
+        </div>
+        <div class="Campo">
+            <label>Año de Fabricacion</label>
+            <select name="year" id="anio">
+                <option value="">-- seleccione --</option>
+                <option value="2005"></option>
+                <option value="2006"></option>
+                <option value="2007"></option>
+                <option value="2008"></option>
+                <option value="2009"></option>
+                <option value="2010"></option>
+                <option value="2011"></option>
+                <option value="2012"></option>
+                <option value="2013"></option>
+                <option value="2014"></option>
+                <option value="2015"></option>
+                <option value="2016"></option>
+                <option value="2017"></option>
+                <option value="2018"></option>
+                <option value="2019"></option>
+                <option value="2020"></option>
+                <option value="2021"></option>
+                <option value="2022"></option>
+            </select> 
+        </div>
+        <div class="TipoAuto">
+            <label>Tipo de Auto</label>
+            <select name="tipe" id="tipo">
+                <option value="">-- seleccione --</option>
+                <option value="Camioneta"></option>
+                <option value="Sedan"></option>
+                <option value="SUV"></option>
+                <option value="Coupe"></option> 
+            </select> 
+        </div>
+
+        <div class="Campo">
+            <label>Plan</label>
+            <input
+                type="Radio"
+                name="plan"
+                value="basico"
+                class="Radio"
+                id="RadioBasico"
+                
+                /> Basico
+            <input
+                type="Radio"
+                name="plan"
+                value="completo"
+                class="Radio"
+                id="RadioCompleto"
+                
+                /> Completo
+        </div>
+    </form>
+    </section>
+        <input type="button" onclick="" class="button-primary u-full-width" value="Cotizar" />
+    </body>
+
+
+
+</html>
