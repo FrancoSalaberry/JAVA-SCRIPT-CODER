@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
-    <head lang="es">
+    <head lang>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
@@ -24,25 +24,26 @@
     <main id="Main">
         <form class="formvender">
             <h3> SIMULADOR DE SEGURO</h3>
+            <div id="msj-errorcoti"></div>
         <DIV class="Campo">
-            <label class="h1opciones" for="nombre">NOMBRE</label>
-            <input class="inputmain" type="text" name="nombre" id="nombre" required>
+            <label class="h1opciones" >NOMBRE</label>
+            <input class="inputmain" type="text" name="nombre1" id="nombre1" required>
         </DIV>
         <DIV class="Campo">
-            <label class="h1opciones" for="apellido">APELLIDO</label>
-            <input class="inputmain" type="text" name="apellido" id="apellido" required>
+            <label class="h1opciones" >APELLIDO</label>
+            <input class="inputmain" type="text" name="apellido1" id="apellido1" required>
         </DIV>
         <DIV class="Campo">
-            <label class="h1opciones" for="edad">EDAD</label>
-            <input class="inputmain" type="text" name="edad" id="edad" required>
+            <label class="h1opciones" >EDAD</label>
+            <input class="inputmain" type="text" name="edad1" id="edad1" required>
         </DIV>
         <DIV class="Campo">
-            <label class="h1opciones" for="valorauto">VALOR DEL AUTOMOVIL</label>
-            <input class="inputmain" type="text" name="valorauto" id="valorauto" required>
+            <label class="h1opciones" >VALOR DEL AUTOMOVIL</label>
+            <input class="inputmain" type="text" name="valorauto1" id="valorauto1" required>
         </DIV>
         <div class="Campo">
             <label class="h1opciones">MARCA</label>
-            <select class="selects" name="Marca" id="marca">
+            <select class="selects" name="Marca1" id="marca1">
                 <option value="">-- Seleccione --</option>
                 <option value="Chevrolet">Chevrolet</option>
                 <option value="Citroen">Citroen</option>
@@ -51,8 +52,8 @@
             </select> 
         </div>
         <div class="Campo">
-            <label class="h1opciones">TIPO DE AUTO</label>
-            <select class="selects" name="tipe" id="tipo">
+            <label class="h1opciones" id="tipoauto1">TIPO DE AUTO</label>
+            <select class="selects" name="tipe1" id="tipe1">
                 <option value="">-- Seleccione --</option>
                 <option value="Camioneta">Camioneta</option>
                 <option value="Sedan">Sedan</option>
@@ -60,31 +61,22 @@
                 <option value="Coupe">Coupe</option> 
             </select> 
         </div>
+
         <div class="Campo">
-            <label class="Labelplan" id="tipoplan">PLAN</label>
-            <input
-                type="Radio"
-                name="plan"
-                value="basico"
-                class="Radio"
-                id="RadioBasico"
-                
-                /> <SPAn>BASICO</SPAn>
-            <input
-                type="Radio"
-                name="plan"
-                value="completo"
-                class="Radio"
-                id="RadioCompleto"
-                
-                /> <SPAn>COMPLETO</SPAn>
+            <label class="h1opciones">PLAN</label>
+            <select class="selects" name="plan1" id="plan1">
+            <option value="">-- Seleccione --</option>
+            <option value="Basico">Basico</option>
+            <option value="Premium">Premium</option>
         </div>
+
         <div class="Campo">
-            <input class="button" type="button" onclick="calculadoraseguro()" class="button-primary u-full-width" value="BUSCAR" />
+        <input class="button" type="button" id="buscarBtn" class="button-primary u-full-width" value="BUSCAR" />
         </div>
+
+        <p id="resultadoSeguro"></p>
 </form>
 
-        <div id="resultado"></div>
 
     </main>
     </body>
@@ -105,6 +97,8 @@
     </div>
     </section>
 </footer>
-</body>
+
+
 <script src="./main.js"></script>
+</body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="es">
     <head lang="es">
     <meta charset="UTF-8">
@@ -24,61 +24,62 @@
         <form class="formvender">
             <h3 id="Buscah3"> ¡BUSCA EL AUTO DE TUS SUEÑOS!</h3>
         <DIV class="Campo">
-            <label class="h1opciones" for="nombre">NOMBRE</label>
-            <input class="inputmaincoti"  type="text" name="nombre" id="nombre" required>
+            <label class="h1opciones">NOMBRE</label>
+            <input class="inputmaincoti"  type="text" name="nombre"required>
         </DIV>
         <DIV class="Campo">
-            <label class="h1opciones" for="apellido">APELLIDO</label>
-            <input class="inputmaincoti"  type="text" name="apellido" id="apellido" required>
+            <label class="h1opciones" >APELLIDO</label>
+            <input class="inputmaincoti"  type="text" name="apellido" required>
         </DIV>
         <DIV class="Campo">
-            <label class="h1opciones" for="edad">DNI</label>
-            <input class="inputmaincoti"  type="text" name="DNI" id="DNI" required>
+            <label class="h1opciones">DNI</label>
+            <input class="inputmaincoti"  type="text" name="DNI"  required>
         </DIV>
         <DIV class="Campo">
-            <label class="h1opciones" for="valorauto">VALOR DEL AUTOMOVIL</label>
-            <input class="inputmaincoti" type="text" name="valorauto" id="valorauto" required>
+            <label class="h1opciones">VALOR DEL AUTOMOVIL</label>
+            <input class="inputmaincoti" type="text" name="valorauto" id="valorauto2" required>
         </DIV>
         <div class="Campo">
-            <label class="h1opciones">MARCA</label>
-            <select class="selects" name="Marca" id="marca">
+            <label class="h1opciones">AÑO MINIMO DE FABRICACION</label>
+            <select class="selects" name="year" id="anio2">
                 <option value="">-- Seleccione --</option>
-                <option value="Chevrolet"></option>
-                <option value="Citroen"></option>
-                <option value="Fiat"></option>
-                <option value="Ford"></option> 
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
             </select> 
         </div>
+        <div id="mensajePrecioMenor" style="display: none; color: rgb(253, 253, 253);"></div>
+
         <div class="Campo">
-            <label class="h1opciones">AÑO DE FABRICACION</label>
-            <select class="selects" name="year" id="anio">
-                <option value="">-- Seleccione --</option>
-                <option value="2005"></option>
-                <option value="2006"></option>
-                <option value="2007"></option>
-                <option value="2008"></option>
-                <option value="2009"></option>
-                <option value="2010"></option>
-                <option value="2011"></option>
-                <option value="2012"></option>
-                <option value="2013"></option>
-                <option value="2014"></option>
-                <option value="2015"></option>
-                <option value="2016"></option>
-                <option value="2017"></option>
-                <option value="2018"></option>
-                <option value="2019"></option>
-                <option value="2020"></option>
-                <option value="2021"></option>
-                <option value="2022"></option>
-            </select> 
+            <input class="button" id="Buscar2" type="button" class="button-primary u-full-width" value="BUSCAR POR PRECIO" />
         </div>
+        
         <div class="Campo">
-            <input class="button" type="button" onclick="" class="button-primary u-full-width" value="BUSCAR" />
+            <input class="button" id="Buscaraño" type="button" class="button-primary u-full-width" value="BUSCAR POR AÑO" />
         </div>
 </form>
+
+<div id="resultadoautos2" class="resultadoautos">
+
+</div>
+
     </main>
-    </body>
+
 
 <footer id="footerCoti">
     <section class="FootMarca">
@@ -96,6 +97,6 @@
     </div>
     </section>
 </footer>
+<script src="./Autos.js"></script>
 </body>
-<script src="./main.js"></script>
 </html>
