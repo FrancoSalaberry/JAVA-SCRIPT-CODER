@@ -1,4 +1,16 @@
+function mostrarGifDeCarga() {
+    // Mostrar gif 
+    document.getElementById('gifCarga').style.display = "block";
+}
+
+function ocultarGifDeCarga() {
+    // Ocultar gif 
+    document.getElementById('gifCarga').style.display = "none";
+}
+
 function calculadoraseguro(Edad, ValorAuto, MarcaAuto, TipoAuto, TipoPlan) {
+    mostrarGifDeCarga(); // Mostrar gif
+
     // Aquí puse los costos por la marca del automóvil
     let valorFord = 2000;
     let valorChevrolet = 1500;
@@ -12,8 +24,8 @@ function calculadoraseguro(Edad, ValorAuto, MarcaAuto, TipoAuto, TipoPlan) {
     let valorSedan = 1800;
     
     // Aquí puse los valores para el tipo de plan
-    let ValorBasico = 1000;
-    let ValorPremium = 4000;
+    let ValorBasico = 2000;
+    let ValorPremium = 10000;
     
     let CostoMarca = 0;
     let CostoTipo = 0;
@@ -21,7 +33,7 @@ function calculadoraseguro(Edad, ValorAuto, MarcaAuto, TipoAuto, TipoPlan) {
     let CostoBase = ValorAuto * 0.01; // Ya no es necesario usar .value
     
     // Aca hago para que la calculadora tome los valores segun la opcion que elija el usuario de costo por marca
-    switch (MarcaAuto.toLowerCase()) { // No es necesario usar .value y toLowerCase() en este contexto
+    switch (MarcaAuto.toLowerCase()) { 
         case "ford":
             CostoMarca = valorFord;
             break;
@@ -39,7 +51,7 @@ function calculadoraseguro(Edad, ValorAuto, MarcaAuto, TipoAuto, TipoPlan) {
     }
     
     // Aca lo mismo que lo anterior solo que por costo de tipo de automóvil
-    switch (TipoAuto.toLowerCase()) { // No es necesario usar .value y toLowerCase() en este contexto
+    switch (TipoAuto.toLowerCase()) { 
         case "suv":
             CostoTipo = valorSUV;
             break;
@@ -72,20 +84,24 @@ function calculadoraseguro(Edad, ValorAuto, MarcaAuto, TipoAuto, TipoPlan) {
     let costoTotal = CostoBase + CostoMarca + CostoTipo + CostoPlan;
     
     // Aplicar aumento del 10% si la edad supera los 70 años por los riesgos de menor vision y reflejos que presentan, uso el if ya que en caso de que sea menor no se aplica ese 10%
-    if (parseInt(Edad) > 70) {
-        costoTotal *= 1.1;
-    }
+    Edad > 70 ? costoTotal *=1.1 : 1;
 
-    document.getElementById('resultadoSeguro').textContent = "El costo total del seguro es: $" + costoTotal.toFixed(2);
-    document.getElementById('resultadoSeguro').style.color = "blue";
-    document.getElementById('resultadoSeguro').style.fontWeight = "bold";
 
-    //localStorage
-    localStorage.setItem("Edad", Edad);
-    localStorage.setItem("Valor del auto", ValorAuto);
-    localStorage.setItem("Tipo de marca elegida", MarcaAuto);
-    localStorage.setItem("Tipo de auto elegido", TipoAuto);
-    localStorage.setItem("Plan Elegido", TipoPlan);
+    setTimeout(function() {
+        ocultarGifDeCarga();
+
+        // Actualizar el DOM con el resultado
+        document.getElementById('resultadoSeguro').textContent = "El costo total del seguro es: $" + costoTotal.toFixed(2);
+        document.getElementById('resultadoSeguro').style.color = "blue";
+        document.getElementById('resultadoSeguro').style.fontWeight = "bold";
+
+        //localStorage
+        localStorage.setItem("Edad", Edad);
+        localStorage.setItem("Valor del auto", ValorAuto);
+        localStorage.setItem("Tipo de marca elegida", MarcaAuto);
+        localStorage.setItem("Tipo de auto elegido", TipoAuto);
+        localStorage.setItem("Plan Elegido", TipoPlan);
+    }, 2000); // 2 segundos
 }
 
 const buttonClick = document.getElementById('buscarBtn');

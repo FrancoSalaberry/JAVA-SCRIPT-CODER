@@ -16,6 +16,7 @@ const autos = [
     { id:15, Nombre:'Citroen C5 Aircross' , marca: 'Citroen', precio: 3800000, año: 2009, tipo: 'Camioneta' , img:'Citroen.C5.jpg'},
 ];
 
+
 let precioMaximo = document.getElementById('valorauto2');
 let añoMinimo = document.getElementById('anio2');
 
@@ -32,30 +33,60 @@ anio2.addEventListener("change", (event) => {
 let buscarautoprecio = document.getElementById("Buscar2")
 let mensajePrecioMenor = document.getElementById("mensajePrecioMenor");
 
+
 buscarautoprecio.addEventListener("click", () => {
     autosFiltradosPorPrecio.length = 0;
-    Buscarautoprecio();
-    if (precioMaximo < 2800000) {
-        mensajePrecioMenor.textContent = "El precio mínimo para buscar autos es de $2,800,000.";
-        mensajePrecioMenor.style.display = "block";
-    } else {
-        mensajePrecioMenor.textContent = "";
-        mensajePrecioMenor.style.display = "none";
-        crearHtml(autosFiltradosPorPrecio);
-        localStorage.setItem("precio", precioMaximo);
-    }
+    mensajePrecioMenor.textContent = ""; // Limpiar mensaje anterior si lo hay
+    mensajePrecioMenor.style.display = "none";
+    
+    // Mostrar el gif de cargando
+    const cargandoDiv = document.getElementById('cargando');
+    cargandoDiv.innerHTML = '<img src="./images/cargando_auto.gif" alt="Cargando...">';
+    cargandoDiv.style.display = 'block';
+
+    // Simular tiempo de carga
+    setTimeout(() => {
+        Buscarautoprecio();
+        
+        if (precioMaximo < 2800000) {
+            mensajePrecioMenor.textContent = "El precio mínimo para buscar autos es de $2,800,000.";
+            mensajePrecioMenor.style.display = "block";
+        } else {
+            crearHtml(autosFiltradosPorPrecio);
+            localStorage.setItem("precio", precioMaximo);
+        }
+
+        cargandoDiv.innerHTML = ''; 
+        cargandoDiv.style.display = 'none';
+    }, 2000); // 2seg
 });
+
 
 let buscarautoaño = document.getElementById("Buscaraño")
 buscarautoaño.addEventListener("click", () => {
     autosFiltradosPorAño.length = 0;
-    BuscarAutoaño();
-    crearHtml(autosFiltradosPorAño)
-    localStorage.setItem("año" , añoMinimo);
+    mensajePrecioMenor.textContent = ""; 
+    mensajePrecioMenor.style.display = "none";
+    
+
+    const cargandoDiv = document.getElementById('cargando');
+    cargandoDiv.innerHTML = '<img src="./images/cargando_auto.gif" alt="Cargando...">';
+    cargandoDiv.style.display = 'block';
+
+    setTimeout(() => {
+        BuscarAutoaño();
+        crearHtml(autosFiltradosPorAño);
+        localStorage.setItem("año", añoMinimo);
+
+        // Esconde el gif
+        cargandoDiv.innerHTML = ''; 
+        cargandoDiv.style.display = 'none';
+    }, 2000); 
 });
 
 let precioGuardado = localStorage.getItem("precio")
 console.log(precioGuardado);
+
 let añoGuardado = localStorage.getItem("año");
 console.log(añoGuardado);
 
@@ -64,18 +95,15 @@ const autosFiltradosPorAño = [];
 
 function BuscarAutoaño() {
     autos.forEach(auto => {
-        if (auto.año >= añoMinimo) {
-            autosFiltradosPorAño.push(auto);
-        }
-    });
+        (auto.año >= añoMinimo && autosFiltradosPorAño.push(auto));
+    }); 
 }
 
     function Buscarautoprecio() {
     autos.forEach(auto => {
-        if (auto.precio <= precioMaximo) {
-            autosFiltradosPorPrecio.push(auto);
-        }
+        (auto.precio <= precioMaximo && autosFiltradosPorPrecio.push(auto));
     });
+    };
 
 // filtra por precio del mas caro al mas barato
 autosFiltradosPorPrecio.sort((a, b) => b.precio - a.precio);
@@ -89,32 +117,32 @@ console.log('Autos filtrados por precio (ordenados de más caro a más barato):'
 
 // Autos filtrados por año
 console.log('Autos filtrados por año (ordenados de más viejo a más nuevo):', autosFiltradosPorAño);
-}
+
 
 
 
 function crearHtml(el) {
-    // Llama al elemento contenedor
+
     let resultadoautos2 = document.getElementById("resultadoautos2");
     
-    // Elimina el contenido anterior del contenedor
+
     resultadoautos2.innerHTML = "";
     
-    // Recorre cada auto en el array filtrado y crea el HTML correspondiente
-    el.forEach(auto => {
+    el.forEach(({img, Nombre, precio, marca, año, id}) => {
         let html = `<div class="card">
-            <img src="./images/Autos/${auto.img}" alt="${auto.Nombre}">
+            <img src="./images/Autos/${img}" alt="${Nombre}">
             <hr>
-            <h3 id="h3card">${auto.Nombre}</h3>
-            <p>Precio: $${auto.precio} </p>
-            <p>Marca: ${auto.marca} </p>
-            <p>Año: ${auto.año} </p>
+            <h3>${Nombre}</h3>
+            <p>Precio: $${precio} </p>
+            <p>Marca: ${marca} </p>
+            <p>Año: ${año} </p>
             <div class="card-action">
-                <button id="${auto.id}">CONSULTAR</button>
+            <a href="./FormAuto.html"target="_blank"><button id="${id}">CONSULTAR</button></a>
             </div>
         </div>`;
         
-        // Agrega el HTML al contenedor
+        
         resultadoautos2.innerHTML += html;
     });
 }
+
