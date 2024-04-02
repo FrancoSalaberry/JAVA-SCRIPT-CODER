@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, li {
+    display: inline-block;
+    font-style: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+#body1 {
+    width: 100%;
+    height: 100%;
+}
+#body2 {
+    width: 100%;
+    height: 100%;
+}
+
+
+#header {
+    background-color: rgb(6, 24, 79);
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#header .h2nav{
+    display: flex;
+    align-items: center;
+    margin-left: 180px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aliceblue;
+}
+
+#header .h2nav .h2coti{
+    margin-left: 80px;
+}
+
+#header .h2nav a{
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+#header img{
+    height: 100px;
+    width: 100px;
+}
+
+#header H1{
+    color: rgb(95, 136, 174);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#header .Titular {
+    display: flex;
+    align-items: center;
+}
+
+
+#headerCoti {
+    background-color: rgb(60, 6, 79);
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#headerCoti .h2nav{
+    display: flex;
+    align-items: center;
+    margin-left: 180px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aliceblue;
+}
+
+#headerCoti .h2nav .h2coti{
+    margin-left: 80px;
+}
+
+#headerCoti .h2nav a{
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+#headerCoti img{
+    height: 100px;
+    width: 100px;
+}
+
+#headerCoti H1{
+    color: rgb(95, 136, 174);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#headerCoti .Titular {
+    display: flex;
+    align-items: center;
+}
+
+
+#cargando {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 30px;
+}
+#cargando img {
+    width: 150px; 
+    height: 150px; 
+}
+
+#Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(90deg, rgb(223, 227, 233) 3%, rgb(72, 110, 155) 52%, rgb(13, 94, 193) 96%);
+}
+
+#MainCoti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh; ;
+    background: linear-gradient(90deg, rgb(227, 204, 235) 3%, rgb(131, 68, 156) 52%, rgb(94, 16, 173) 96%);
+}
+
+#Main .formvender{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    background-color: rgb(4, 4, 67);
+    width: 480px;
+    height: 650px;
+    border-radius: 4px;
+    box-shadow: 7px 13px 37px #000;
+}
+
+#MainCoti .formvender{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    background-color: rgb(60, 4, 67);
+    width: 400px;
+    height: 450px;
+    border-radius: 4px;
+    box-shadow: 7px 13px 37px #000;
+}
+
+#Main .formvender .selects {
+    background-color: rgb(216, 251, 255);
+    font-family: cursive;
+}
+#MainCoti .formvender .selects {
+    background-color: rgb(216, 251, 255);
+    font-family: cursive;
+}
+
+#Main .inputmain {
+    width: 150px;
+    height: 23px;
+}
+
+
+#Main .formvender .Labelplan {
+    font-size: 30px;
+    font-family: fantasy;
+    color: aliceblue;
+    padding-right: 20px;
+}
+#MainCoti .formvender .Labelplan {
+    font-size: 16px;
+    font-family: fantasy;
+    color: aliceblue;
+    padding-right: 20px;
+}
+
+#Main .formvender span{
+    font-size: 15px;
+    font-family: fantasy;
+    color: aliceblue;
+}
+#MainCoti .formvender span{
+    font-size: 12px;
+    font-family: fantasy;
+    color: aliceblue;
+}
+
+#Main .Campo {
+    padding-bottom: 30px;
+}
+.resultadoSeguro{
+    color: aliceblue;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+#Main h3 {
+    display: flex;
+    padding-bottom: 30px;
+    padding-top: 30PX;
+    text-align: center;
+    font-family: fantasy;
+    color: aliceblue;
+    font-size: 28px;
+}
+
+#Main .h1opciones {
+    font-family: fantasy;
+    color: aliceblue;
+    font-size: 21px;
+}
+
+#Main .button{
+    width: 70px;
+    height: 40px;
+    font-family: fantasy;
+}
+#MainCoti .Campo {
+    padding-bottom: 20px;
+}
+
+#MainCoti h3 {
+    display: flex;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+    font-family: fantasy;
+    color: aliceblue;
+}
+
+#MainCoti .h1opciones {
+    font-family: fantasy;
+    color: aliceblue;
+}
+
+#MainCoti .button{
+    width: 120px;
+    height: 40px;
+    font-family: fantasy;
+}
+
+#MainCoti .resultadoautos2{
+    width: 50px;
+    height: 50px;
+}
+
+
+.card {
+    text-align: center ;
+    width: 180px;
+    height: 300px;
+    padding-bottom: 10px;
+    border: 2px solid #000000; 
+    border-radius: 5px;
+    overflow: hidden; 
+    background-color: rgb(144, 107, 204);
+}
+.card img{
+    width: 180px;
+    height: 120px;;
+}
+.card p{
+    font-family: fantasy;
+    font-weight: bold;
+    color: black;
+}
+
+
+.resultadoautos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 80px; /* Espacio entre elementos */
+    padding-top: 50px;
+}
+
+
+
+#footer {
+    background-color: #13172a;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+#footer img{
+    display: flex;
+    height: 60px;
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+#footer .FootMarca {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+
+#footerCoti {
+    background-color: #22132a;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0
+}
+
+
+#footerCoti img{
+    display: flex;
+    height: 60px;
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+#footerCoti .FootMarca {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+#bodyform {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(188, 197, 206) 3%, rgb(45, 109, 146) 52%, rgb(3, 53, 100) 96%);
+}
+
+#SORTEO{
+    width: 100%;
+    height: 850px;
+}
+
+.section1form{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    text-align: center;
+    padding: 20px 80px;
+}
+
+.h2form {
+    position: relative;
+    padding-left: 520px;
+    padding-right: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.h1form {
+    display: flex;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #000000;  
+    padding-left: 220px;
+    padding-top: 30px;  
+    padding-bottom: 20px;  
+}
+
+.sectionFORM {
+    width: 400px;
+    height: 500px;
+    flex-direction: column;
+    background-color: #030a68;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(3, 3, 3);
+    box-shadow: 7px 13px 37px #000;
+}
+.sectionFORM p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    color: #f8f7f7;
+    }
+
+    .botons {
+        width: 50%; /* Ajusta el ancho del botón */
+        background: #06d8e7;
+        border-radius: 2px black;
+        padding: 12px;
+        color: rgb(0, 0, 0);
+        margin: 40px 85px;
+        font-size: 16px;
+        text-align: center; /* Centra el texto del botón */
+    }
+
+.sectionFORM h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #07e4e4;
+}
+
+.controls {
+    width: 100%;
+    background: #f8f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    border: 2px solid #1facc5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font : 40px;
+    color: rgb(3, 3, 3);
+}
+
+.controls2 {
+    width: 100%;
+    background: #f8f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    border: 2px solid #09c6e7;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font : 40px;
+    color: rgb(8, 8, 8);
+}
+
+#footerform {
+    background-color: #13172a;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+#footerform img{
+    display: flex;
+    height: 60px;
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+#footerform .FootMarca {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+
+#footerform {
+    background-color: #0a0344;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0
+}
+
+
+#footerform img{
+    display: flex;
+    height: 60px;
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+#footerform .FootMarca {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+#gifCarga {
+    display: none;
+}
