@@ -1,3 +1,4 @@
+//deje los autos tambien por aca aunque tenga el fetch porque no pude hacer que mis funciones buscarautoaño y buscarautoprecio me tomen el fetch
 const autos = [
     { id:1, Nombre:'Ford Explorer' , marca: 'Ford', precio: 5000000, año: 2015, tipo: 'SUV' , img:'Ford.Explorer.jpg' },
     { id:2, Nombre:'Chevrolet Camaro' , marca: 'Chevrolet', precio: 3000000, año: 2010, tipo: 'Coupe', img:'Chevrolet.Camaro.jpg' },
@@ -142,7 +143,15 @@ function crearHtml(el) {
         </div>`;
         
         
-        resultadoautos2.innerHTML += html;
-    });
+        resultadoautos2.innerHTML += html;})}
+
+
+const getData = async (url) =>{
+    const respuesta = await fetch(url);
+    const datos = await respuesta.json();
+    const { autos } = datos;
+    console.log(autos);
+    crearHtml(autos)
 }
 
+getData("./fautos/fautos.json")

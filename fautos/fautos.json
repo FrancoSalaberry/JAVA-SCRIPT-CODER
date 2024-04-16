@@ -1,0 +1,139 @@
+{
+    "autos": [
+    {
+        "id": 1,
+        "Nombre": "Ford Explorer",
+        "marca": "Ford",
+        "precio": 5000000,
+        "año": 2015,
+        "tipo": "SUV",
+        "img": "Ford.Explorer.jpg"
+},
+{
+        "id": 2,
+        "Nombre": "Chevrolet Camaro",
+        "marca": "Chevrolet",
+        "precio": 3000000,
+        "año": 2010,
+        "tipo": "Coupe",
+        "img": "Chevrolet.Camaro.jpg"
+},
+{
+        "id": 3,
+        "Nombre": "Citroen Berlingo",
+        "marca": "Citroen",
+        "precio": 4000000,
+        "año": 2018,
+        "tipo": "Camioneta",
+        "img": "Citroen.Berlingo.jpg"
+},
+{
+        "id": 4,
+        "Nombre": "Fiat Cronos",
+        "marca": "Fiat",
+        "precio": 8000000,
+        "año": 2021,
+        "tipo": "Sedán",
+        "img": "Fiat.Cronos.jpg"
+},
+{
+        "id": 5,
+        "Nombre": "Ford Mustang",
+        "marca": "Ford",
+        "precio": 6000000,
+        "año": 2013,
+        "tipo": "Coupe",
+        "img": "Ford.Mustang.jpg"
+},
+{
+        "id": 6,
+        "Nombre": "Chevrolet Tahoe",
+        "marca": "Chevrolet",
+        "precio": 7000000,
+        "año": 2019,
+        "tipo": "SUV",
+        "img": "Chevrolet.Tahoe.jpg"
+    },
+    {
+        "id": 7,
+        "Nombre": "Citroen C4 Aircross",
+        "marca": "Citroen",
+        "precio": 4500000,
+        "año": 2012,
+        "tipo": "Camioneta",
+        "img": "Citroen.C4.Aircross.jpg"
+    },
+    {
+        "id": 8,
+        "Nombre": "Fiat Tipo",
+        "marca": "Fiat",
+        "precio": 9000000,
+        "año": 2020,
+        "tipo": "Sedán",
+        "img": "Fiat.Tipo.jpg"
+    },
+    {
+        "id": 9,
+        "Nombre": "Ford Fiesta",
+        "marca": "Ford",
+        "precio": 5500000,
+        "año": 2008,
+        "tipo": "Coupe",
+        "img": "Ford.Fiesta.jpg"
+    },
+    {
+        "id": 10,
+        "Nombre": "Chevrolet Cruze",
+        "marca": "Chevrolet",
+        "precio": 3500000,
+        "año": 2011,
+        "tipo": "Sedán",
+        "img": "Chevrolet.Cruze.jpg"
+    },
+    {
+        "id": 11,
+        "Nombre": "Citroen C3 Aircross",
+        "marca": "Citroen",
+        "precio": 2200000,
+        "año": 2007,
+        "tipo": "Camioneta",
+        "img": "Citroe.c3.jpg"
+    },
+    {
+        "id": 12,
+        "Nombre": "Fiat 500X",
+        "marca": "Fiat",
+        "precio": 7500000,
+        "año": 2014,
+        "tipo": "SUV",
+        "img": "Fiat.X500.jpg"
+    },
+    {
+        "id": 13,
+        "Nombre": "Ford Focus",
+        "marca": "Ford",
+        "precio": 2800000,
+        "año": 2006,
+        "tipo": "Coupe",
+        "img": "Ford.Focus.jpg"
+    },
+    {
+        "id": 14,
+        "Nombre": "Chevrolet Malibu",
+        "marca": "Chevrolet",
+        "precio": 3200000,
+        "año": 2012,
+        "tipo": "Sedán",
+        "img": "Chevrolet.Malibu.jpg"
+    },
+    {
+        "id": 15,
+        "Nombre": "Citroen C5 Aircross",
+        "marca": "Citroen",
+        "precio": 3800000,
+        "año": 2009,
+        "tipo": "Camioneta",
+        "img": "Citroen.C5.jpg"
+    }
+    ]
+}
